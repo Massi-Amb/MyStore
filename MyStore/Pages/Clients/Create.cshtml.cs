@@ -4,8 +4,11 @@ using System.Data.SqlClient;
 
 namespace MyStore.Pages.Clients
 {
+   
     public class CreateModel : PageModel
     {
+        //initializing Error and success message of the project
+
         public ClientInfo ClientInfo = new ClientInfo();
         public string errorMessage = "";
         public string successMessge = "";
@@ -55,6 +58,7 @@ namespace MyStore.Pages.Clients
                 return;
             }
 
+            //Calling the success message to confirm the Added client
             ClientInfo.Name = ""; ClientInfo.Email = ""; ClientInfo.Phone = ""; ClientInfo.Address = "";
             successMessge = "New Client Added Successfully";
 
